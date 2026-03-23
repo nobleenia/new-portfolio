@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router";
 import { projects } from "../data/projects";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { useEffect } from "react";
 
 export function ProjectDetail() {
