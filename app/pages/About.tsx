@@ -1,11 +1,11 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Award, BookOpen, Briefcase, GraduationCap } from "lucide-react";
+import { Award, BookOpen, Briefcase, GraduationCap, House } from "lucide-react";
 
 export function About() {
   const skills = [
     {
       category: "Programming",
-      items: ["Python", "R", "SQL", "JavaScript/TypeScript", "Julia"],
+      items: ["JavaScript/TypeScript", "Go", "Python", "C", "Solidity", "R", "SQL"],
     },
     {
       category: "Machine Learning",
@@ -55,16 +55,29 @@ export function About() {
 
   const education = [
     {
-      degree: "M.S. in Data Science",
-      institution: "Massachusetts Institute of Technology",
-      year: "2020",
+      degree: "M.S. in Software Engineering",
+      institution: "Campus Saint-Marc - ZONE01",
+      year: "2026",
     },
     {
-      degree: "B.S. in Industrial Engineering",
-      institution: "Georgia Institute of Technology",
-      year: "2018",
+      degree: "M.S. in Industrial Engineering (Supply Chain Management)",
+      institution: "L'Institut polytechnique de Grenoble - Grenoble INP",
+      year: "2021",
+    },
+    {
+      degree: "B.S. in Industrial Tech",
+      institution: "University of Nigeria, Nsukka",
+      year: "2014",
     },
   ];
+
+  const bootcamps = [
+    {
+      degree: "Diploma. in Full Stack Development",
+      institution: "ALX Africa, Holberton Schools",
+      year: "2024",
+    },
+  ]
 
   const certifications = [
     "AWS Certified Machine Learning - Specialty",
@@ -209,7 +222,7 @@ export function About() {
       {/* Education Section */}
       <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <GraduationCap className="w-6 h-6" />
@@ -243,6 +256,23 @@ export function About() {
                   </li>
                 ))}
               </ul>
+            </div>
+             <div>
+              <div className="flex items-center gap-3 mb-8">
+                <House className="w-6 h-6" />
+                <h2 className="text-3xl tracking-tight">Bootcamps</h2>
+              </div>
+              <div className="space-y-6">
+                {bootcamps.map((boot, index) => (
+                  <div key={index}>
+                    <h3 className="text-xl mb-1 tracking-tight">
+                      {boot.degree}
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400">{boot.institution}</p>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-500">{boot.year}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
