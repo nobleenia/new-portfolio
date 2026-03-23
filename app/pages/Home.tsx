@@ -131,9 +131,10 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
-              <div
+              <Link
                 key={project.id}
-                className="group cursor-pointer border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors"
+                to={`/projects/${project.id}`}
+                className="group cursor-pointer border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors block"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                   <ImageWithFallback
@@ -160,7 +161,7 @@ export function Home() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="mt-8 md:hidden">
