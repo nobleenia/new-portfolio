@@ -222,8 +222,8 @@ export function About() {
       {/* Education Section */}
       <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div>
+          <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between gap-12 lg:gap-8">
+            <div className="flex-1 min-w-[280px]">
               <div className="flex items-center gap-3 mb-8">
                 <GraduationCap className="w-6 h-6" />
                 <h2 className="text-3xl tracking-tight">Education</h2>
@@ -240,7 +240,7 @@ export function About() {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="flex-1 min-w-[280px]">
               <div className="flex items-center gap-3 mb-8">
                 <Award className="w-6 h-6" />
                 <h2 className="text-3xl tracking-tight">Certifications</h2>
@@ -257,7 +257,7 @@ export function About() {
                 ))}
               </ul>
             </div>
-             <div>
+            <div className="flex-1 min-w-[280px]">
               <div className="flex items-center gap-3 mb-8">
                 <House className="w-6 h-6" />
                 <h2 className="text-3xl tracking-tight">Bootcamps</h2>
