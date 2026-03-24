@@ -35,18 +35,16 @@ export function Home() {
           <div className="max-w-3xl">
             <div className="inline-block mb-4 px-4 py-1.5 bg-neutral-100 dark:bg-neutral-800 rounded-full">
               <span className="text-xs tracking-wide text-neutral-700 dark:text-neutral-300">
-                Software Engineer · Data Science
+                SOFTWARE ENGINEERING · OPERATIONS & DECISION SYSTEMS · OPTIMIZATIONS
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl mb-6 tracking-tight">
               Building Intelligent
               <br />
-              <span className="text-neutral-500 dark:text-neutral-400">Supply Chain Systems</span>
+              <span className="text-neutral-500 dark:text-neutral-400">Decision Systems</span>
             </h1>
             <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed max-w-2xl">
-              Specializing in data-driven decision systems for operations and
-              supply chain optimization. Transforming complex logistics
-              challenges into elegant, scalable solutions.
+              Building data-driven systems for inventory, logistics, and operational decision-making.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -73,17 +71,16 @@ export function Home() {
           <h2 className="text-3xl md:text-4xl mb-12 tracking-tight">
             Expertise
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
               <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
                 <BarChart3 className="w-6 h-6" />
               </div>
               <h3 className="text-xl mb-3 tracking-tight">
-                Predictive Analytics
+                Decision-Focused Software Systems
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Machine learning models for demand forecasting, inventory
-                optimization, and risk prediction in complex supply chains.
+                Developing backend and full-stack tools that transform complex logic into usable systems for real-world decision-making.
               </p>
             </div>
             <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
@@ -91,11 +88,10 @@ export function Home() {
                 <Network className="w-6 h-6" />
               </div>
               <h3 className="text-xl mb-3 tracking-tight">
-                Network Optimization
+                Simulation & Optimization
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Strategic design and optimization of distribution networks,
-                warehouse locations, and transportation routes.
+                Building models to test scenarios, evaluate trade-offs, and improve system performance under uncertainty.
               </p>
             </div>
             <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
@@ -106,8 +102,18 @@ export function Home() {
                 Decision Systems
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Real-time dashboards and decision support tools that turn data
-                into actionable insights for operations teams.
+                Designing tools that help businesses determine when and how much to reorder, reducing stockouts and excess inventory.
+              </p>
+            </div>
+            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
+              <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
+                <TrendingUp className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl mb-3 tracking-tight">
+                Operational Data Analysis
+              </h3>
+              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                Turning raw operational data into clear insights that support better planning, forecasting, and execution.
               </p>
             </div>
           </div>
