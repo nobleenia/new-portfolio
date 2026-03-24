@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, BarChart3, Cpu, Network, Package, TrendingUp } from "lucide-react";
+import { ArrowRight, BarChart3, Cpu, Package, TrendingUp } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Home() {
@@ -140,31 +140,33 @@ export function Home() {
               <Link
                 key={project.id}
                 to={`/projects/${project.id}`}
-                className="group cursor-pointer border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors block"
+                className="group relative cursor-pointer block aspect-[4/3] overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl mb-2 tracking-tight">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                <ImageWithFallback
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-white/95 dark:bg-neutral-900/95 p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl mb-2 tracking-tight">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Link>
