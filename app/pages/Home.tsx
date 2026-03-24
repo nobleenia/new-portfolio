@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, BarChart3, Network, TrendingUp } from "lucide-react";
+import { ArrowRight, BarChart3, Cpu, Network, Package, TrendingUp } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Home() {
@@ -72,20 +72,20 @@ export function Home() {
             Expertise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
-              <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-                <BarChart3 className="w-6 h-6" />
+            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 border rounded-lg hover:shadow-md transition">
+              <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 ">
+                <Cpu className="w-6 h-6" />
               </div>
               <h3 className="text-xl mb-3 tracking-tight">
-                Decision-Focused Software Systems
+                Software Systems
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Developing backend and full-stack tools that transform complex logic into usable systems for real-world decision-making.
+                Developing backend and full-stack tools that transform complex logic into usable systems for real-world use-cases.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
+            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 border rounded-lg hover:shadow-md transition">
               <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-                <Network className="w-6 h-6" />
+                <TrendingUp className="w-6 h-6" />
               </div>
               <h3 className="text-xl mb-3 tracking-tight">
                 Simulation & Optimization
@@ -94,20 +94,20 @@ export function Home() {
                 Building models to test scenarios, evaluate trade-offs, and improve system performance under uncertainty.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
+            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 border rounded-lg hover:shadow-md transition">
               <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-                <TrendingUp className="w-6 h-6" />
+                <Package className="w-6 h-6" />
               </div>
               <h3 className="text-xl mb-3 tracking-tight">
                 Decision Systems
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Designing tools that help businesses determine when and how much to reorder, reducing stockouts and excess inventory.
+                Designing tools that help businesses determine reorder point and quantities, reducing stockouts & excess inventory.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800">
+            <div className="p-8 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 border rounded-lg hover:shadow-md transition">
               <div className="w-12 h-12 mb-6 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-                <TrendingUp className="w-6 h-6" />
+                <BarChart3 className="w-6 h-6" />
               </div>
               <h3 className="text-xl mb-3 tracking-tight">
                 Operational Data Analysis

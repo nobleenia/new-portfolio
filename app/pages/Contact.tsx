@@ -41,7 +41,7 @@ export function Contact() {
                 Whether you have a question about my work, want to discuss a
                 potential project, or just want to connect, feel free to reach
                 out. I'm always open to exploring new opportunities and
-                challenges in the supply chain and data science space.
+                challenges in tech.
               </p>
 
               <div className="space-y-6">
@@ -55,7 +55,7 @@ export function Contact() {
                       href="mailto:hello@datachain.com"
                       className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                     >
-                      hello@datachain.com
+                      neluwah@gmail.com
                     </a>
                   </div>
                 </div>
@@ -67,12 +67,12 @@ export function Contact() {
                   <div>
                     <h3 className="text-lg mb-1 tracking-tight">LinkedIn</h3>
                     <a
-                      href="https://linkedin.com/in/datachain"
+                      href="https://linkedin.com/in/nobleeluwah"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                     >
-                      linkedin.com/in/datachain
+                      linkedin.com/in/nobleeluwah
                     </a>
                   </div>
                 </div>
@@ -84,12 +84,12 @@ export function Contact() {
                   <div>
                     <h3 className="text-lg mb-1 tracking-tight">GitHub</h3>
                     <a
-                      href="https://github.com/datachain"
+                      href="https://github.com/nobleenia"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                     >
-                      github.com/datachain
+                      github.com/nobleenia
                     </a>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-lg mb-1 tracking-tight">Location</h3>
                     <p className="text-neutral-600 dark:text-neutral-400">
-                      San Francisco Bay Area, CA
+                      Rouen, Normandie, France.
                     </p>
                   </div>
                 </div>
@@ -112,8 +112,8 @@ export function Contact() {
                   Available for Consulting
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  I'm currently available for consulting projects in supply
-                  chain optimization, data science, and ML system design.
+                  I'm currently available for consulting projects in software engineering, data science, supply
+                  chain optimization, and ML system design.
                 </p>
               </div>
             </div>

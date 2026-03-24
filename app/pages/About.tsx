@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Award, BookOpen, Briefcase, GraduationCap, House } from "lucide-react";
+import { Award, BookOpen, Brain, Briefcase, GraduationCap, House } from "lucide-react";
 
 export function About() {
   const skills = [
@@ -30,34 +30,34 @@ export function About() {
   ];
 
   const experience = [
-    {
-      title: "Senior Data Scientist",
-      company: "Global Logistics Corp",
-      period: "2024 - Present",
-      description:
-        "Leading data science initiatives for supply chain optimization. Built ML models for demand forecasting and inventory management.",
-    },
-    {
-      title: "Operations Research Analyst",
-      company: "Supply Chain Solutions Inc",
-      period: "2022 - 2024",
-      description:
-        "Developed optimization algorithms for warehouse layout and transportation routing. Improved operational efficiency by 30%.",
-    },
-    {
-      title: "Data Engineer",
-      company: "Tech Innovations Ltd",
-      period: "2020 - 2022",
-      description:
-        "Built data pipelines and analytics infrastructure. Processed 10TB+ of supply chain data daily.",
-    },
-  ];
+  {
+    title: "Web Developer (Security & Systems)",
+    company: "Attineos Applications",
+    period: "2024",
+    description:
+      "Built a domain conformity checker automating DNS validation, SPF/DMARC checks, IP reputation analysis, and external API integrations. Developed an admin dashboard with React and TypeScript, improving system usability and operational visibility.",
+  },
+  {
+    title: "Supply Chain Simulation & Optimization",
+    company: "CESI – Logistics 4.0 Lab",
+    period: "2021",
+    description:
+      "Developed simulation models for a multi-modal logistics platform. Improved operational efficiency through data-driven scheduling and system modeling, contributing to cost reduction and high on-time delivery performance.",
+  },
+  {
+    title: "Supply Chain & Process Analyst",
+    company: "Lobic Engineering Services",
+    period: "2017 - 2018",
+    description:
+      "Optimized supply chain processes, reducing operational costs and improving efficiency. Led supplier performance analysis and implemented process improvements that reduced risks and enhanced system reliability.",
+  },
+];
 
   const education = [
     {
-      degree: "M.S. in Software Engineering",
-      institution: "Campus Saint-Marc - ZONE01",
-      year: "2026",
+      degree: "B.S in Software Engineering",
+      institution: "Campus Saint-Marc",
+      year: "2026"
     },
     {
       degree: "M.S. in Industrial Engineering",
@@ -71,18 +71,26 @@ export function About() {
     },
   ];
 
-  const bootcamps = [
-    {
-      degree: "Diploma in Full Stack Development",
-      institution: "ALX Africa",
-      year: "2024",
-    },
-  ]
+  const training = [
+  {
+    name: "Full-Stack Software Engineering",
+    organization: "Holberton Schools - ALX Africa",
+    period: "2023 - 2024",
+    focus:
+      "Backend systems, data modeling, distributed collaboration",
+  },
+  {
+  name: "Blockchain Architecture & Systems",
+  organization: "Althash University",
+  period: "2022 - 2023",
+  focus: "Distributed systems fundamentals and network structures.",
+}
+];
 
   const certifications = [
-    "AWS Certified Machine Learning - Specialty",
-    "Google Cloud Professional Data Engineer",
+    "Google Cloud Professional Data Analytics",
     "APICS CPIM (Certified in Production and Inventory Management)",
+    "Microsoft Certified: Azure AI - Specialty",
   ];
 
   return (
@@ -100,13 +108,13 @@ export function About() {
                   I didn’t start in tech.
                 </p>
                 <p>
-                  I started in operations — where decisions have real consequences, delays translate directly into costs, 
+                  I started in operations, where decisions have real consequences, delays translate into costs, 
                   and inefficiencies can’t hide behind polished interfaces.
                 </p>
                 <p>
                   I’ve worked on factory floors, within supply chains, 
-                  and across logistics systems where a single wrong assumption can lead to missed deliveries, excess inventory, or wasted capital. 
-                  In one role, I helped reduce costs and significantly improve performance — not through theory, 
+                  and across logistics systems where a single wrong assumption can lead to missed deliveries, excess inventory, or wasted capital. <br />
+                  In one role, I helped reduce costs and significantly improve performance not just through theory, 
                   but by changing how decisions were actually made.
                 </p>
                 <p>
@@ -118,7 +126,7 @@ export function About() {
                 </p>
                 <p>
                   Not because I wanted to “become a developer,” 
-                  but because I wanted to build the tools I wish I had when dealing with real operational challenges.
+                  but because I needed to build the tools I wish I had when dealing with real operational challenges.
                 </p>
                 <p>              
                   Since then, my work has spanned:
@@ -136,7 +144,7 @@ export function About() {
                 </p>
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3" />
                 <p>
-                  Today, I’m continuing in that direction through a BAC+3 program at Campus Saint-Marc (ZONE01), 
+                  Today, I’m continuing in that direction through a BAC+3 program at Campus Saint-Marc (Zone01), 
                   while actively building tools at the intersection of:
                   <ul className="list-disc pl-5 space-y-1 text-gray-700">
                     <li>operations</li>
@@ -182,7 +190,7 @@ export function About() {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3" />
                 <p>
                   <h3>Where I’m Going</h3>
-                  Right now, I’m focused on building decision engines for real operational problems — 
+                  Right now, I’m focused on building decision engines for real operational problems; 
                   starting with inventory systems for e-commerce and growing businesses.
                 </p>
                 <p>
@@ -200,14 +208,14 @@ export function About() {
                 <p>
                   If you’re looking for someone who can bridge operations and software,
                   someone who can structure and build around your data,
-                  or someone who takes a practical approach to solving messy, real-world problems—
+                  or someone who takes a practical approach to solving messy, real-world problems
                 </p>
                 <p>
-                  <strong>there’s a good chance we’ll work well together.</strong>
+                  <strong>...there’s a good chance we’ll work WELL TOGETHER.</strong>
                 </p>
               </div>
             </div>
-            <div className="w-full lg:col-span-1 max-w-sm mx-auto aspect-[4/5] bg-neutral-100 dark:bg-neutral-800 overflow-hidden rounded-2xl shadow-sm lg:sticky lg:top-32">
+            <div className="w-full lg:col-span-1 max-w-sm mx-auto aspect-[2.8/5] bg-neutral-100 dark:bg-neutral-800 overflow-hidden rounded-2xl shadow-sm lg:sticky lg:top-32">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1610576660982-9eab5683cb42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW50aXN0JTIwd29ya2luZ3xlbnwxfHx8fDE3NzM3Mzg5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Professional profile"
@@ -314,17 +322,18 @@ export function About() {
             </div>
             <div className="w-full lg:w-auto">
               <div className="flex items-center gap-3 mb-8">
-                <House className="w-6 h-6" />
-                <h2 className="text-3xl tracking-tight">Bootcamps</h2>
+                <Brain className="w-6 h-6" />
+                <h2 className="text-3xl tracking-tight">Training</h2>
               </div>
               <div className="space-y-6">
-                {bootcamps.map((boot, index) => (
+                {training.map((train, index) => (
                   <div key={index}>
                     <h3 className="text-xl mb-1 tracking-tight">
-                      {boot.degree}
+                      {train.name}
                     </h3>
-                    <p className="text-neutral-600 dark:text-neutral-400">{boot.institution}</p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-500">{boot.year}</p>
+                    <p className="text-neutral-600 dark:text-neutral-400">{train.organization}</p>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-500">{train.period}</p>
+                    <p className="text-neutral-600 dark:text-neutral-400">{train.focus}</p>
                   </div>
                 ))}
               </div>

@@ -22,11 +22,11 @@ export function Header() {
         <div className="flex justify-between items-center h-36">
           {/* Logo */}
           <Link to="/" className="flex flex-col pt-2">
-            <span className="text-3xl md:text-4xl font-black tracking-[0.3em] text-neutral-900 dark:text-white uppercase">
+            <span className="text-3xl md:text-4xl font-black tracking-[0.4em] text-neutral-900 dark:text-white uppercase">
               NOBLE
             </span>
-            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.35em] text-neutral-400 dark:text-neutral-500 uppercase mt-1">
-              SOFTWARE ENGINEERING & SUPPLY CHAIN
+            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.55em] text-neutral-400 dark:text-neutral-500 uppercase mt-1">
+              SOFTWARE ENGINEER
             </span>
           </Link>
 
