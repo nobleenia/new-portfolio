@@ -1,5 +1,7 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Award, BookOpen, Brain, Briefcase, GraduationCap, House } from "lucide-react";
+import mainPhoto from "../components/static/main_photo.jpeg";
+import secondPhoto from "../components/static/second_photo.jpeg";
 
 export function About() {
   const skills = [
@@ -213,13 +215,19 @@ export function About() {
                 <p>
                   <strong>...there’s a good chance we’ll work WELL TOGETHER.</strong>
                 </p>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent my-3" />
               </div>
             </div>
-            <div className="w-full lg:col-span-1 max-w-sm mx-auto aspect-[2.8/5] bg-neutral-100 dark:bg-neutral-800 overflow-hidden rounded-2xl shadow-sm lg:sticky lg:top-32">
+            <div className="relative w-full lg:col-span-1 max-w-sm mx-auto aspect-[2.8/5] bg-neutral-100 dark:bg-neutral-800 overflow-hidden rounded-2xl shadow-sm lg:sticky lg:top-32 group">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1610576660982-9eab5683cb42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW50aXN0JTIwd29ya2luZ3xlbnwxfHx8fDE3NzM3Mzg5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={mainPhoto}
                 alt="Professional profile"
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+              />
+              <ImageWithFallback
+                src={secondPhoto}
+                alt="Professional profile alternative"
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
               />
             </div>
           </div>

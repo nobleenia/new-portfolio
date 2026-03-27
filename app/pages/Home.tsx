@@ -35,7 +35,7 @@ export function Home() {
           <div className="max-w-3xl">
             <div className="inline-block mb-4 px-4 py-1.5 bg-neutral-100 dark:bg-neutral-800 rounded-full">
               <span className="text-xs tracking-wide text-neutral-700 dark:text-neutral-300">
-                SOFTWARE ENGINEERING · OPERATIONS & DECISION SYSTEMS · OPTIMIZATIONS
+                Software Engineering  •  Operations & Decision Systems  •  Optimizations
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl mb-6 tracking-tight">

@@ -1,5 +1,28 @@
-import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, Send, ChevronDown } from "lucide-react";
 import { useState } from "react";
+
+function FaqItem({ question, children }: { question: string; children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-neutral-200 dark:border-neutral-800 pb-6 last:border-0 last:pb-0">
+      <h3
+        className="text-xl tracking-tight cursor-pointer hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors flex justify-between items-center bg-transparent"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span>{question}</span>
+        <ChevronDown 
+          className={`w-5 h-5 text-neutral-400 transition-transform duration-200 shrink-0 ml-4 ${isOpen ? "rotate-180" : ""}`} 
+        />
+      </h3>
+      {isOpen && (
+        <div className="mt-4">
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -35,13 +58,11 @@ export function Contact() {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl mb-8 tracking-tight">
-                Let's Start a Conversation
+                Let’s Work on a Real Problem
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 mb-12 leading-relaxed">
-                Whether you have a question about my work, want to discuss a
-                potential project, or just want to connect, feel free to reach
-                out. I'm always open to exploring new opportunities and
-                challenges in tech.
+                If you're dealing with software engineering tasks, inventory challenges, operational inefficiencies, or data that isn’t driving decisions, 
+                I can help structure and build systems that make those problems clearer and more manageable.
               </p>
 
               <div className="space-y-6">
@@ -112,8 +133,7 @@ export function Contact() {
                   Available for Consulting
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                  I'm currently available for consulting projects in software engineering, data science, supply
-                  chain optimization, and ML system design.
+                  Available for software engineering gigs, projects inventory and operational decision systems — helping businesses reduce stockouts, avoid excess inventory, and make clearer, data-driven decisions.
                 </p>
               </div>
             </div>
@@ -193,7 +213,7 @@ export function Contact() {
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 focus:border-neutral-900 dark:focus:border-neutral-500 outline-none transition-colors resize-none"
-                    placeholder="Tell me about your project or inquiry..."
+                    placeholder="Briefly describe your problem, your current setup, and what you're trying to improve."
                   />
                 </div>
 
@@ -206,7 +226,7 @@ export function Contact() {
                 </button>
               </form>
 
-              <p className="mt-6 text-sm text-neutral-500 dark:text-neutral-500">
+              <p className="mt-6 text-sm text-neutral-550 dark:text-neutral-500">
                 I typically respond within 24-48 hours during business days.
               </p>
             </div>
@@ -220,37 +240,38 @@ export function Contact() {
           <h2 className="text-3xl mb-12 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl mb-2 tracking-tight">
-                What types of projects do you work on?
-              </h3>
+          <div className="space-y-6">
+            <FaqItem question="What types of projects do you work on?">
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                I specialize in supply chain optimization, demand forecasting,
+                I am unrestricted, though I specialize in supply chain optimization, demand forecasting,
                 inventory management, and building data-driven decision systems.
                 I work on both consulting projects and full-time opportunities.
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl mb-2 tracking-tight">
-                What is your typical engagement model?
-              </h3>
+            </FaqItem>
+            
+            <FaqItem question="What is your typical engagement model?">
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 I work on both project-based and retainer arrangements,
                 depending on the scope and timeline. I'm flexible and can adapt
                 to your team's needs.
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl mb-2 tracking-tight">
-                Do you offer training or workshops?
-              </h3>
+            </FaqItem>
+            
+            <FaqItem question="Do you offer training or workshops?">
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Yes, I conduct workshops and training sessions on data science,
                 machine learning, and optimization for supply chain teams.
                 Contact me to discuss your specific needs.
               </p>
-            </div>
+            </FaqItem>
+            
+            <FaqItem question="Who are your target clients?">
+              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                I typically work with e-commerce sellers, small businesses, 
+                teams looking to improve operational decision-making. 
+                I also work for enterprises (research laboratories) who need an interdiscilined software engineer
+              </p>
+            </FaqItem>
           </div>
         </div>
       </section>
