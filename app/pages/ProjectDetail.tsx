@@ -43,28 +43,34 @@ export function ProjectDetail() {
               </span>
             ))}
             <div className="ml-auto flex gap-4">
-              {project.code && (
-                <a
-                  href={project.code}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase tracking-widest"
-                >
-                  <Github className="w-4 h-4" />
-                  Code
-                </a>
-              )}
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase tracking-widest"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Demo
-                </a>
-              )}
+              <a
+                href={project.code || "#"}
+                target={project.code ? "_blank" : undefined}
+                rel={project.code ? "noreferrer" : undefined}
+                onClick={(e) => !project.code && e.preventDefault()}
+                className={`inline-flex items-center gap-2 text-sm transition-colors uppercase tracking-widest ${
+                  project.code
+                    ? "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                    : "text-neutral-400 dark:text-neutral-600 cursor-default opacity-50"
+                }`}
+              >
+                <Github className="w-4 h-4" />
+                Code
+              </a>
+              <a
+                href={project.demo || "#"}
+                target={project.demo ? "_blank" : undefined}
+                rel={project.demo ? "noreferrer" : undefined}
+                onClick={(e) => !project.demo && e.preventDefault()}
+                className={`inline-flex items-center gap-2 text-sm transition-colors uppercase tracking-widest ${
+                  project.demo
+                    ? "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                    : "text-neutral-400 dark:text-neutral-600 cursor-default opacity-50"
+                }`}
+              >
+                <ExternalLink className="w-4 h-4" />
+                Demo
+              </a>
             </div>
           </div>
         </div>
