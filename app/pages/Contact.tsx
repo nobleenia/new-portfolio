@@ -32,12 +32,33 @@ export function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission would be handled here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b37f829a-2371-4f0c-a84b-68e3396c7cd7",
+          ...formData
+        }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        alert("Thank you for your message! I'll get back to you soon.");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert("Something went wrong with the submission. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Failed to send the message. Please check your connection.");
+    }
   };
 
   const handleChange = (
