@@ -1,6 +1,7 @@
 import { Outlet, ScrollRestoration } from "react-router";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Toaster } from "./ui/sonner";
 
 export function Root() {
   return (
@@ -11,6 +12,7 @@ export function Root() {
       </main>
       <Footer />
       <ScrollRestoration />
+      <Toaster />
     </div>
   );
 }

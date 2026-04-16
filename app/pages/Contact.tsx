@@ -1,5 +1,6 @@
 import { Mail, Linkedin, Github, MapPin, Send, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 function FaqItem({ question, children }: { question: string; children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,14 +51,14 @@ export function Contact() {
       
       const result = await response.json();
       if (result.success) {
-        alert("Thank you for your message! I'll get back to you soon.");
+        toast.success("Thank you for your message! I'll get back to you soon.");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert("Something went wrong with the submission. Please try again.");
+        toast.error("Something went wrong with the submission. Please try again.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert("Failed to send the message. Please check your connection.");
+      toast.error("Failed to send the message. Please check your connection.");
     }
   };
 
