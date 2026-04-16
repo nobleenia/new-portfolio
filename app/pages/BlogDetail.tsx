@@ -2,7 +2,27 @@ import { useParams, Link, Navigate } from "react-router";
 import { blogPosts } from "../data/blogs";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Calendar, Clock, ExternalLink } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
+import mermaid from "mermaid";
+
+const Mermaid = ({ chart }: { chart: string }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current && chart) {
+      mermaid.render(`mermaid-${Math.random().toString(36).substring(2, 9)}`, chart)
+        .then(({ svg }) => {
+          if (containerRef.current) {
+            containerRef.current.innerHTML = svg;
+          }
+        })
+        .catch(e => console.error("Mermaid error", e));
+    }
+  }, [chart]);
+
+  return <div ref={containerRef} className="my-6 overflow-x-auto flex justify-center" />;
+};
 
 export function BlogDetail() {
   const { id } = useParams<{ id: string }>();
@@ -79,20 +99,30 @@ export function BlogDetail() {
 
       {/* Blog Content */}
       <section className="pb-20">
-        <div className="max-w-[800px] mx-auto px-6 lg:px-12">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
           <div className="prose prose-neutral dark:prose-invert max-w-none text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
             {post.content ? (
-              <p>{post.content}</p>
+              <ReactMarkdown
+                components={{
+                  code(props) {
+                    const { children, className, node, ...rest } = props;
+                    const match = /language-(\w+)/.exec(className || "");
+                    if (match && match[1] === "mermaid") {
+                      return <Mermaid chart={String(children).replace(/\n$/, "")} />;
+                    }
+                    return (
+                      <code {...rest} className={className}>
+                        {children}
+                      </code>
+                    );
+                  },
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             ) : (
               <p>{post.excerpt}</p>
             )}
-            {/* Added for dummy content illustration */}
-            <p className="mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p className="mt-4">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
           </div>
         </div>
       </section>

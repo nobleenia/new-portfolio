@@ -1,7 +1,5 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Award, BookOpen, Brain, Briefcase, GraduationCap, House } from "lucide-react";
-import mainPhoto from "../components/static/main_photo.jpeg";
-import secondPhoto from "../components/static/second_photo.jpeg";
 
 export function About() {
   const skills = [
@@ -220,12 +218,12 @@ export function About() {
             </div>
             <div className="relative w-full lg:col-span-1 max-w-sm mx-auto aspect-[2.8/5] bg-neutral-100 dark:bg-neutral-800 overflow-hidden rounded-2xl shadow-sm lg:sticky lg:top-32 group">
               <ImageWithFallback
-                src={mainPhoto}
+                src="/images/main_photo.jpeg"
                 alt="Professional profile"
                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
               />
               <ImageWithFallback
-                src={secondPhoto}
+                src="/images/second_photo.jpeg"
                 alt="Professional profile alternative"
                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
               />

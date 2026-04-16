@@ -28,7 +28,7 @@ export function ProjectDetail() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight uppercase">
               {project.title}
             </h1>
-            <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl leading-relaxed">
+            <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-1xl leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -43,14 +43,28 @@ export function ProjectDetail() {
               </span>
             ))}
             <div className="ml-auto flex gap-4">
-              <button className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase tracking-widest">
-                <Github className="w-4 h-4" />
-                Code
-              </button>
-              <button className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase tracking-widest">
-                <ExternalLink className="w-4 h-4" />
-                Demo
-              </button>
+              {project.code && (
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase tracking-widest"
+                >
+                  <Github className="w-4 h-4" />
+                  Code
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase tracking-widest"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Demo
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -69,7 +83,7 @@ export function ProjectDetail() {
           </div>
 
           {/* Project Details Writeup */}
-          <div className="max-w-3xl">
+          <div className="max-w-1xl">
             <h2 className="text-2xl font-bold mb-6 tracking-tight uppercase">Overview</h2>
             <div className="prose prose-neutral dark:prose-invert max-w-none">
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-lg">

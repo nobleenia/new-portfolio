@@ -1,3 +1,6 @@
+import digital_twin from "../blog_contents/digital_twin.md?raw";
+import reinforcement from "../blog_contents/reinforcement.md?raw"
+
 export const blogPosts = [
   {
     id: 1,
@@ -5,11 +8,11 @@ export const blogPosts = [
     excerpt:
       "A deep dive into building robust demand forecasting models using Long Short-Term Memory networks and how they outperform traditional time series methods.",
     image:
-      "https://images.unsplash.com/photo-1761223976379-04c361d3068a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MzczODk3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "/images/blog/lstm.png",
     date: "March 10, 2026",
-    readTime: "8 min read",
+    readTime: "3 min read",
     tags: ["Machine Learning", "Python", "Supply Chain"],
-    content: "This is the full length article content where I discuss the architecture of LSTM models applied to retail demand forecasting...",
+    externalLink: "https://medium.com/@neluwah/implementing-lstm-networks-for-demand-forecasting-b0a78269b3dc"
   },
   {
     id: 2,
@@ -29,9 +32,9 @@ export const blogPosts = [
     excerpt:
       "How to design and implement streaming data pipelines for real-time supply chain monitoring and alerting.",
     image:
-      "https://images.unsplash.com/photo-1759752394755-1241472b589d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwc2NyZWVufGVufDF8fHx8MTc3MzY2NTIyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "/images/blog/real_time_analytics.png",
     date: "February 20, 2026",
-    readTime: "10 min read",
+    readTime: "15 min read",
     tags: ["Data Engineering", "Kafka", "Real-time"],
     content: "Here we discuss real-time consumer and producer setups using Kafka..."
   },
@@ -39,13 +42,16 @@ export const blogPosts = [
     id: 4,
     title: "The Role of Digital Twins in Supply Chain Optimization",
     excerpt:
-      "Understanding how digital twin technology can revolutionize supply chain planning and decision-making processes.",
+      "Supply-chain managers have long combined planning models, dashboards, and simulation studies to support decisions. Digital twins promise to connect these activities more tightly by linking a live or regularly refreshed representation of a supply chain to operational data, scenario analysis, prediction, and decision support. \
+      The term, however, is often used loosely. This article offers a focused review of foundational and recent literature to clarify what a supply-chain digital twin is, what it is not, where it creates decision value, and why many initiatives stop short of a fully functional twin. \
+      The discussion shows that the strongest business case is not visualisation alone, but the ability to test options before acting in the physical system. The article also argues that many current implementations are better described as digital shadows or partial twins because they lack strong feedback loops, robust integration across organisational boundaries, or decision logic that meaningfully changes operations. \
+      For researchers, the paper identifies a need for clearer maturity models, stronger evaluation designs, and more evidence on when digital twins improve cost, service, and resilience together. For practitioners, it outlines a staged path from fragmented data and static models toward operationally useful twins that support planning, disruption response, and optimisation.",
     image:
-      "https://images.unsplash.com/photo-1761195696590-3490ea770aa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBsb2dpc3RpY3MlMjBhdXRvbWF0aW9ufGVufDF8fHx8MTc3MzcyNDc3OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "/images/blog/digital_twin.jpg",
     date: "February 10, 2026",
-    readTime: "7 min read",
+    readTime: "40 min read",
     tags: ["Digital Twins", "Simulation", "Innovation"],
-    externalLink: "https://towardsdatascience.com/digital-twins",
+    content: digital_twin,
   },
   {
     id: 5,
@@ -57,7 +63,7 @@ export const blogPosts = [
     date: "January 28, 2026",
     readTime: "11 min read",
     tags: ["Reinforcement Learning", "AI", "Inventory"],
-    content: "Diving into OpenAI Gym environments built specifically for inventory control...",
+    content: reinforcement,
   },
   {
     id: 6,
@@ -65,7 +71,7 @@ export const blogPosts = [
     excerpt:
       "Best practices for building robust, scalable data pipelines that power enterprise supply chain analytics platforms.",
     image:
-      "https://images.unsplash.com/photo-1759752394755-1241472b589d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwc2NyZWVufGVufDF8fHx8MTc3MzY2NTIyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "/images/blog/data_pipelines.png",
     date: "January 15, 2026",
     readTime: "9 min read",
     tags: ["Data Engineering", "Architecture", "Best Practices"],

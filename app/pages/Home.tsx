@@ -6,24 +6,31 @@ export function Home() {
   const featuredProjects = [
     {
       id: 1,
-      title: "Demand Forecasting System",
-      description: "ML-powered demand prediction for retail supply chains",
-      image: "https://images.unsplash.com/photo-1759752394755-1241472b589d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwc2NyZWVufGVufDF8fHx8MTc3MzY2NTIyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Python", "TensorFlow", "React"],
+      title: "Inventory Optimizer",
+      description:
+        "Built an end-to-end inventory optimization tool in Go combining lightweight statistical demand forecasting (SMA, SES) with a Monte Carlo simulation engine and classical inventory models (EOQ, reorder points, safety stock). \
+        Processes CSV inputs, quantifies stockout risk and total cost under uncertainty, and produces actionable reorder recommendations with downloadable CSV/PDF reports. Includes optional PostgreSQL-backed persistence and JWT-based auth for saved reports.",
+      image:
+        "/images/inventory-optimizer/inventory_optimizer.png",
+      tags: ["Go", "PostgreSQL", "Monte Carlo", "CSV", "HTML Templates"],
     },
     {
       id: 2,
-      title: "Warehouse Optimization",
-      description: "AI-driven layout and routing optimization",
-      image: "https://images.unsplash.com/photo-1761195696590-3490ea770aa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBsb2dpc3RpY3MlMjBhdXRvbWF0aW9ufGVufDF8fHx8MTc3MzcyNDc3OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Optimization", "Python", "Simulation"],
+      title: "Lyre & Muses NGO Website",
+      description:
+        "Designed and maintained a modern, responsive website for a non-profit organization, focusing on clear communication, accessibility, and user engagement. Delivered a professional online presence to support outreach, donations, and community visibility.",
+      image:
+        "/images/lyre-muses/main_photo.png",
+      tags: ["WordPress", "JavaScript", "Bootstrap", "SEO", "Web Administration"],
     },
     {
       id: 3,
-      title: "Supply Chain Network Design",
-      description: "Strategic network optimization for global distribution",
-      image: "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXBwbHklMjBjaGFpbiUyMG5ldHdvcmslMjBtYXB8ZW58MXx8fHwxNzczNjU2OTU1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Network Analysis", "Optimization", "GIS"],
+      title: "QuizApp",
+      description:
+        "Engineered a full-stack quiz platform with secure authentication, persistent quiz state, and performance-focused APIs. Built a social learning experience with community, friend discovery, and notifications to boost engagement and retention.",
+      image:
+        "/images/quizapp/main_photo.png",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Redis", "JWT"],
     },
   ];
 
@@ -140,7 +147,7 @@ export function Home() {
               <Link
                 key={project.id}
                 to={`/projects/${project.id}`}
-                className="group relative cursor-pointer block aspect-[4/3] overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors"
+                className="group relative cursor-pointer block aspect-[5/3] overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors"
               >
                 <ImageWithFallback
                   src={project.image}
