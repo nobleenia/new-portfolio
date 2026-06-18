@@ -206,6 +206,6 @@ export const projects = [
       "/images/graphql-dashboard/photo3.png",
     ],
     code: "https://zone01normandie.org/git/neluwah/graphql.git",
-    demo: "https://idyllic-souffle-698aba.netlify.app/",
+    demo: "https://graphql-dashboard.netlify.app/",
   },
 ];
