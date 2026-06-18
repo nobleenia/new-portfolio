@@ -17,7 +17,8 @@ That sounds like a trade story. It is. But it is also a software story.
 Because once trade becomes unstable, logistics stops being only a planning problem. It becomes a **live systems problem**. And live systems need software.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## The old model is breaking
 
@@ -35,7 +36,8 @@ A monthly planning cycle can tell you what you hoped would happen.
 Neither is good enough when the network has already changed.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## This is where software engineering meets operations research
 
@@ -77,7 +79,8 @@ In unstable times, that separation becomes expensive.
 Because the real challenge is no longer only finding a good plan. It is building a system that can **notice change**, **recompute decisions**, and **push useful actions** before the damage spreads.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## Logistics is becoming an event-driven system
 
@@ -105,7 +108,8 @@ Suddenly the important questions look like this:
 This is not just transformation language. It is the practical reality of running a network under pressure.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## The winning systems will not be the prettiest dashboards
 
@@ -138,7 +142,8 @@ When those three layers work together, companies get a decision system.
 That is where software engineering and operations research stop being separate disciplines and start becoming one operating model.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## Geopolitics is forcing this convergence
 
@@ -166,7 +171,8 @@ They require optimisation models that understand cost and risk. They require sof
 That is why supply-chain resilience is no longer just a logistics issue. It is becoming a systems engineering discipline.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## What good looks like now
 
@@ -189,7 +195,8 @@ The future of logistics may not belong to the companies with the most sophistica
 And that is a software problem as much as a logistics one.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## Why this matters right now
 
@@ -211,7 +218,8 @@ The companies that understand this early will not just react faster. They will m
 That may be the real competitive edge of the next few years.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## Key takeaway
 
@@ -224,7 +232,8 @@ In that world, logistics is not only a transport problem or a planning problem.
 It is a software problem too.  
 &nbsp;
 
----
+---  
+&nbsp;
 
 ## Sources
 

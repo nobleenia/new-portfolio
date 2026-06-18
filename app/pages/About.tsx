@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Award, BookOpen, Brain, Briefcase, GraduationCap, House } from "lucide-react";
+import { Award, BookOpen, Brain, Briefcase, GraduationCap } from "lucide-react";
 
 export function About() {
   const skills = [

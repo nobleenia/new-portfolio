@@ -38,7 +38,7 @@ export const blogPosts = [
     date: "February 20, 2026",
     readTime: "15 min read",
     tags: ["Data Engineering", "Kafka", "Real-time"],
-    content: "Here we discuss real-time consumer and producer setups using Kafka..."
+    externalLink: "https://medium.com/@neluwah/building-real-time-analytics-with-apache-kafka-architecture-topics-and-event-design-b257cb404b0a"
   },
   {
     id: 4,

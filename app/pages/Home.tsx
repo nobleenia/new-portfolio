@@ -25,11 +25,11 @@ export function Home() {
     },
     {
       id: 3,
-      title: "QuizApp",
+      title: "CityBuzz Transport & Traffic Module",
       description:
-        "Engineered a full-stack quiz platform with secure authentication, persistent quiz state, and performance-focused APIs. Built a social learning experience with community, friend discovery, and notifications to boost engagement and retention.",
+        "Developed the transport and traffic feature of CityBuzz, a Rouen-focused local platform, using GTFS-based public transport data to display mobility information through an interactive, responsive and user-friendly interface. The module helps users explore nearby transport options, route information, stops, service context and city movement data in a practical urban mobility experience.",
       image:
-        "/images/quizapp/main_photo.png",
+        "/images/citybuzz/main_photo.png",
       tags: ["React", "Node.js", "Express", "MongoDB", "Redis", "JWT"],
     },
   ];

@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router";
-import { projects } from "../data/projects";
+import { projects } from "../data/projects.ts";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { ExternalLink, Github } from "lucide-react";
 import { useEffect } from "react";

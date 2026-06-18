@@ -77,17 +77,8 @@ export function Blog() {
           <h2 className="text-3xl mb-12 tracking-tight">All Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(1).map((post) => {
-              const ContentWrapper = post.externalLink ? "a" : Link;
-              const wrapperProps = post.externalLink
-                ? { href: post.externalLink, target: "_blank", rel: "noopener noreferrer" }
-                : { to: `/blog/${post.id}` };
-
-              return (
-                <ContentWrapper
-                  key={post.id}
-                  {...wrapperProps}
-                  className="group cursor-pointer border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors block"
-                >
+              const cardContent = (
+                <>
                   <div className="aspect-[4/3] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                     <ImageWithFallback
                       src={post.image}
@@ -124,7 +115,31 @@ export function Blog() {
                       </div>
                     </div>
                   </div>
-                </ContentWrapper>
+                </>
+              );
+
+              if (post.externalLink) {
+                return (
+                  <a
+                    key={post.id}
+                    href={post.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group cursor-pointer border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors block"
+                  >
+                    {cardContent}
+                  </a>
+                );
+              }
+
+              return (
+                <Link
+                  key={post.id}
+                  to={`/blog/${post.id}`}
+                  className="group cursor-pointer border border-neutral-200 dark:border-neutral-800 hover:border-neutral-900 dark:hover:border-neutral-600 transition-colors block"
+                >
+                  {cardContent}
+                </Link>
               );
             })}
           </div>

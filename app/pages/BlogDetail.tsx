@@ -4,21 +4,36 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Calendar, Clock, ExternalLink } from "lucide-react";
 import { useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
-import mermaid from "mermaid";
 
 const Mermaid = ({ chart }: { chart: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (containerRef.current && chart) {
-      mermaid.render(`mermaid-${Math.random().toString(36).substring(2, 9)}`, chart)
-        .then(({ svg }) => {
-          if (containerRef.current) {
-            containerRef.current.innerHTML = svg;
-          }
-        })
-        .catch(e => console.error("Mermaid error", e));
+    let cancelled = false;
+
+    async function renderChart() {
+      if (!containerRef.current || !chart) return;
+
+      try {
+        const mermaid = (await import("mermaid")).default;
+        const { svg } = await mermaid.render(
+          `mermaid-${Math.random().toString(36).substring(2, 9)}`,
+          chart
+        );
+
+        if (!cancelled && containerRef.current) {
+          containerRef.current.innerHTML = svg;
+        }
+      } catch (error) {
+        console.error("Mermaid error", error);
+      }
     }
+
+    renderChart();
+
+    return () => {
+      cancelled = true;
+    };
   }, [chart]);
 
   return <div ref={containerRef} className="my-6 overflow-x-auto flex justify-center" />;
@@ -55,7 +70,7 @@ export function BlogDetail() {
     <div className="w-full bg-white dark:bg-neutral-950 min-h-screen">
       {/* Blog Hero Section */}
       <section className="pt-24 pb-12">
-        <div className="max-w-[800px] mx-auto px-6 lg:px-12">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
           <div className="flex flex-wrap gap-2 mb-6">
             {post.tags.map((tag) => (
               <span

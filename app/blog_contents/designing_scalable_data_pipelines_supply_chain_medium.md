@@ -3,7 +3,7 @@
 *Why the best supply chain decisions often depend on the quiet systems nobody notices until they fail.*  
 &nbsp;
 
-![Scalable supply chain pipeline diagram](/images/blog/data_pipelines.png)  
+![Scalable supply chain pipeline diagram](/images/blog/scalable_supply_chain_pipeline_diagram.png)  
 &nbsp;
 
 A supply chain can look fine right up until it breaks.  
