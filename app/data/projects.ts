@@ -102,7 +102,7 @@ export const projects = [
       "/images/quizapp/photo2.png",
     ],
     code: "https://github.com/nobleenia/QuizApp.git",
-    demo: "",
+    demo: "https://quizapp-dh2v.onrender.com",
   },
   {
     id: 5,
